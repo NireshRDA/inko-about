@@ -1015,10 +1015,10 @@ section,
 /* Zoom Animation Keyframes */
 @keyframes zoomInOut {
   0%, 100% {
-    transform: scale(0.5);
+    transform: scale(1);
   }
   50% {
-    transform: scale(1);
+    transform: scale(1.08);
   }
 }
 
