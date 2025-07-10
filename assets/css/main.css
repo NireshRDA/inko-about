@@ -1998,9 +1998,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+
 
 .space 
 {
@@ -2712,9 +2710,9 @@ section,
   color: var(--contrast-color);
 }
 
-.features-tabs .tab-content .tab-pane {
-  /* padding: 40px 0; */
-}
+/* .features-tabs .tab-content .tab-pane {
+  padding: 40px 0;
+} */
 
 @media (max-width: 768px) {
   .features-tabs .tab-content .tab-pane {
