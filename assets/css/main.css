@@ -34,7 +34,9 @@
   background-color: var(--accent-color) !important;
 color: white !important;
 } */
-
+table{
+  font-size: 15px;
+}
 .table-head tr th{
   background-color: var(--accent-color) !important;
   color: white !important;
@@ -3089,27 +3091,3 @@ section,
 #yoga {
    scroll-margin-top: 80px;
 }
-
-/* Flim Section Flim.html */
- .section-title {
-      font-weight: 700;
-      font-size: 2rem;
-      border-bottom: 3px solid #000;
-      display: inline-block;
-      margin-bottom: 1rem;
-    }
-    .year-label {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    .custom-table th, .custom-table td {
-      vertical-align: middle;
-      text-align: center;
-    }
-    .custom-table {
-      background-color: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
