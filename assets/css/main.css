@@ -29,7 +29,13 @@
   --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #5fcf80; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
+#yoga {
+   scroll-margin-top: 150px !important;
+}
+#calligraphy{
+   scroll-margin-top: 150px !important;
 
+}
 /* th{
   background-color: var(--accent-color) !important;
 color: white !important;
@@ -973,7 +979,12 @@ section,
   will-change: transform;
   backface-visibility: hidden;
 }
-
+.breadcumb-area-about{
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100%;
+  background-color: #0000007e;
+}
 /* Mobile Height Adjustment */
 @media only screen and (max-width: 767px) {
   .breadcumb-area {
@@ -1290,14 +1301,14 @@ section,
   border-radius: 5px;
   animation: glow 1s infinite alternate;
 }
-@keyframes glow {
+/* @keyframes glow {
   from {
     box-shadow: 0 0 5px #f78320, 0 0 10px #f78320;
   }
   to {
-    box-shadow: 0 0 10px #f78320, 0 0 15px #f78320;
+    box-shadow: 0 0 5px #f78320, 0 0 15px #f78320;
   }
-}
+} */
 .courses .course-content .price {
   margin: 0;
   font-weight: 700;
@@ -1673,7 +1684,7 @@ section,
 }
 
 .trainers .member .member-img {
-  margin: 0 80px;
+  margin-right:70px;
   /* border-radius: 50%; */
   background-size: cover;
   border-radius: 10px;
@@ -1777,7 +1788,7 @@ section,
   border-top: 4px solid var(--surface-color);
   padding: 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  margin-top: -60px;
+  margin-top: 0px;
   transition: 0.3s;
 }
 
@@ -2879,7 +2890,7 @@ section,
 
 .features-tabs .visual-content .main-image img {
   width: 100%;
-  height: auto;
+  height: 300px;
   transition: transform 0.6s ease;
 }
 
@@ -2958,18 +2969,7 @@ section,
   height: 20% !important;
   /* border: 1px solid red; */
 }
-@media screen and (max-width: 576px) {
-  .faculty-img{
-    width: 50%;
-    height: 50%;
-    /* border: 1px solid blue !important; */
-    margin-left: 25%;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (max-width: 600px) {
 
-}
 /* Language information */
 .single-blog-post {
   position: relative;
@@ -2998,8 +2998,11 @@ section,
 .single-blog-post .blog-content {
   /* background-color: #f5f9fa; */
   padding: 45px 40px;
-  border: none; }
-
+  border: none;
+}
+.blog-content{
+  background: #f5f9fa;
+}
 @media only screen and (max-width: 767px) {
  .single-blog-post .blog-content {
     padding: 30px 20px; } }
