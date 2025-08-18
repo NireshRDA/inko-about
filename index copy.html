@@ -28,6 +28,48 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
 
+  <style>
+    .hero-swiper {
+      overflow: hidden; /* prevents adjacent slides from showing */
+      position: relative;
+    }
+
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 450px; /* adapt to your design */
+    }
+
+    .slide-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+      will-change: transform;
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 1rem;
+      color: white;
+    }
+
+    /* simple animation utility (you can adapt to your existing CSS) */
+    .animated {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .animated.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 
 </head>
 
@@ -147,7 +189,8 @@
               <div class="swiper-wrapper">
 
                 <!-- Slide 1 -->
-                <div class="swiper-slide" style="background-image: url('assets/img/bg-1.jpg');">
+                <div class="swiper-slide">
+                  <div class="slide-bg" style="background-image: url('assets/img/bg-1.jpg');"></div>
                   <div class="slide-content d-flex justify-content-center align-items-center text-center">
                     <div class="hero-slides-content">
                       <h6 class="animated fadeInUp delay-1">Celebrating Indo-Korean relations</h6>
@@ -157,7 +200,8 @@
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="swiper-slide" style="background-image: url('assets/img/bg-1a.jpg');">
+                <div class="swiper-slide">
+                  <div class="slide-bg" style="background-image: url('assets/img/bg-1a.jpg');"></div>
                   <div class="slide-content d-flex justify-content-center align-items-center text-center">
                     <div class="hero-slides-content">
                       <h6 class="animated fadeInUp delay-1">Explore Culture & Art</h6>
@@ -167,7 +211,8 @@
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="swiper-slide" style="background-image: url('assets/img/bg-2.jpg');">
+                <div class="swiper-slide">
+                  <div class="slide-bg" style="background-image: url('assets/img/bg-2.jpg');"></div>
                   <div class="slide-content d-flex justify-content-center align-items-center text-center">
                     <div class="hero-slides-content">
                       <h6 class="animated fadeInUp delay-1">Connecting Nations</h6>
@@ -177,6 +222,11 @@
                 </div>
 
               </div>
+
+              <!-- controls (optional) -->
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev" aria-label="Previous slide"></div>
+              <div class="swiper-button-next" aria-label="Next slide"></div>
             </section>
 
 
@@ -789,7 +839,7 @@
    <script src="assets/js/popper.min.js"></script>
   
   <!-- Swiper Initialization -->
-  <script>
+  <!-- <script>
     const swiper = new Swiper('.hero-swiper', {
       loop: true,
       autoplay: {
@@ -799,8 +849,52 @@
       effect: 'fade',
       speed: 1000
     });
-  </script>
+  </script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const swiper = new Swiper('.hero-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        speed: 800,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        on: {
+          init() {
+            runSlideAnimations(this);
+          },
+          slideChangeTransitionStart() {
+            runSlideAnimations(this);
+          },
+        },
+      });
 
+      function runSlideAnimations(swiperInstance) {
+        // reset all
+        document.querySelectorAll('.hero-slides-content .animated').forEach(el => {
+          el.classList.remove('active');
+          void el.offsetWidth; // reflow to allow restart if needed
+        });
+
+        // activate current
+        const currentSlide = swiperInstance.slides[swiperInstance.activeIndex];
+        currentSlide.querySelectorAll('.animated').forEach(el => {
+          // small timeout to allow transition (optional)
+          setTimeout(() => el.classList.add('active'), 50);
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

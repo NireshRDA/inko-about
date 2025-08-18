@@ -17,7 +17,11 @@
   --accent-color: #00A652 ; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-  --inko-orange: #f78320; /* Background color for the milde buttons, including in sections highlighter */
+  --inko-orange: #f78320;
+  --inko-blue: #125c93;
+  --inko-red: #ff2d16;
+  --insta-pink: #d62976;
+  --outline-color: #000000; /* Background color for the milde buttons, including in sections highlighter */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -34,19 +38,41 @@
 }
 #calligraphy{
    scroll-margin-top: 150px !important;
-
 }
-/* th{
-  background-color: var(--accent-color) !important;
-color: white !important;
-} */
 table{
+  font-size: 0.85rem;
+  font-family: var(--nav-font);
+}
+.table-head th {
+  background-color: var(--accent-color);
+  font-weight: 500;
+  /* font-size: 16px; */
+  color: #f8f9fa !important;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table td, .table th {
+  padding: 14px 16px;
   font-size: 15px;
+  vertical-align: middle;
+  color: #333;
 }
-.table-head tr th{
-  background-color: var(--accent-color) !important;
-  color: white !important;
+
+.table tbody tr:nth-child(even) {
+  background-color: #fdfdfd;
 }
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Optional - Responsive fix */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
@@ -263,7 +289,7 @@ h6 {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: rgb(77, 77, 77);
   font-size: 14px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
@@ -594,6 +620,23 @@ h6 {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
+.fb:hover,
+.fb:hover i {
+  color: var(--inko-blue);
+  border-color: var(--inko-blue);
+}
+
+.insta:hover,
+.insta:hover i {
+  color: var(--insta-pink);
+  border-color: var(--insta-pink);
+}
+
+.youtube:hover,
+.youtube:hover i {
+  color: var(--inko-red);
+  border-color: var(--inko-red);
+}
 
 .footer h4 {
   font-size: 16px;
@@ -635,7 +678,7 @@ h6 {
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: var(--inko-blue);
 }
 
 .footer .footer-contact p {
@@ -682,7 +725,7 @@ h6 {
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--inko-blue), transparent 20%);
 }
 
 .footer .copyright {
@@ -745,7 +788,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: var(--inko-blue);
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -874,7 +917,7 @@ section,
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: var(--accent-color);
+  background: var(--inko-red);
   margin: 4px 10px;
 }
 
@@ -1258,11 +1301,11 @@ section,
 }
 
 .features .features-item:hover {
-  border-color: var(--accent-color);
+  border-color: var(--inko-blue);
 }
 
 .features .features-item:hover h3 a {
-  color: var(--accent-color);
+  color: var(--inko-blue);
 }
 
 /*--------------------------------------------------------------
@@ -2849,7 +2892,7 @@ section,
 }
 
 .features-tabs .content-wrapper .btn-primary {
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 20%));
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--inko-blue), var(--heading-color) 20%));
   color: var(--contrast-color);
   padding: 15px 35px;
   border-radius: 50px;
@@ -3095,35 +3138,44 @@ section,
 
 
 /* Accordian */
-  .accordion-container {
-      max-width: 100%;
-      margin: auto;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-    }
+.accordion-container {
+  max-width: 100%;
+  margin: auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
 
-    .accordion-button {
-      /* background: linear-gradient(135deg, #6e8efb, #a777e3); */
-      background-color: #00A652;
-      color: white;
-      font-weight: 600;
-      border-radius: 10px !important;
-    }
+.accordion-button {
+  /* background: linear-gradient(135deg, #6e8efb, #a777e3); */
+  background-color: #00A652;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px !important;
+}
 
-    .accordion-button:focus {
-      box-shadow: none;
-    }
+.accordion-button:focus {
+  box-shadow: none;
+}
 
-    .accordion-body {
-      background-color: #f9f9fc;
-      border-radius: 0 0 10px 10px;
-      padding: 20px;
-      animation: fadeIn 0.4s ease-in-out;
-    }
+.accordion-body {
+  background-color: #f9f9fc;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.level-2{
+  background-color: #096190 !important;
+}
+.level-3{
+  background-color: #f48220 !important;
+}
+.level-4{
+  background-color: #ec1c24 !important;
+}
