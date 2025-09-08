@@ -3179,3 +3179,178 @@ section,
 .level-4{
   background-color: #ec1c24 !important;
 }
+
+/* ====== Focus / Clik Styles ====== */
+.single-event-area {
+position: relative;
+border-radius: 1rem;
+overflow: hidden;
+background: #fff;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+animation: fadeUp 0.9s ease both;
+}
+
+/* Card Hover */
+.single-event-area:hover {
+transform: translateY(-10px) scale(1.03);
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+cursor: pointer;
+}
+
+/* Image Styling */
+.single-event-area img {
+width: 100%;
+height: auto;
+display: block;
+transition: transform 0.6s ease;
+}
+
+.single-event-area:hover img {
+transform: scale(1.07);
+}
+
+/* Event Text Container */
+.single-event-area .event-text {
+text-align: center;
+padding: 25px 22px;
+transition: background-color 0.4s ease;
+}
+
+.single-event-area:hover .event-text {
+background: #f9f7f3;
+/* subtle background for hover */
+}
+
+/* Headings */
+.single-event-area .event-text h4 {
+font-size: 1.3rem;
+font-weight: 600;
+margin-bottom: 14px;
+color: var(--inko-blue);
+transition: color 0.3s ease;
+}
+
+.single-event-area:hover .event-text h4 {
+color: var(--inko-orange);
+}
+
+/* Meta Data */
+.single-event-area .event-text .event-meta-data {
+margin-bottom: 18px;
+font-size: 0.95rem;
+color: #666;
+}
+
+.single-event-area .event-text .event-meta-data a {
+color: var(--inko-blue);
+margin: 0 10px;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.single-event-area .event-text .event-meta-data a:hover {
+color: var(--inko-orange);
+}
+
+/* Modern Button */
+.single-event-area .event-text .see-more-btn {
+font-size: 0.85rem;
+text-transform: uppercase;
+font-weight: 600;
+color: #fff;
+background: linear-gradient(135deg, var(--inko-orange), var(--inko-red));
+border: none;
+padding: 10px 20px;
+border-radius: 50px;
+display: inline-block;
+box-shadow: 0 4px 12px rgba(247, 131, 32, 0.25);
+transition: all 0.35s ease;
+
+}
+
+.single-event-area .event-text .see-more-btn:hover {
+background: linear-gradient(135deg, var(--inko-red), var(--inko-orange));
+transform: translateY(-3px);
+box-shadow: 0 6px 16px rgba(255, 45, 22, 0.35);
+}
+
+/* ====== Fade-in Animation on Load ====== */
+@keyframes fadeUp {
+0% {
+opacity: 0;
+transform: translateY(40px);
+}
+
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+.single-event-area {
+margin-bottom: 1.5rem;
+}
+
+.single-event-area .event-text {
+padding: 20px 15px;
+}
+
+.single-event-area .event-text h4 {
+font-size: 1.1rem;
+}
+}
+
+ /* CSS */
+    .button-74 {
+      background-color: #5c5a5a25;
+      border: 2px solid #4D4D4D;
+      border-radius: 30px;
+      box-shadow: #4D4D4D 4px 4px 0 0;
+      color: #4D4D4D;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 0 18px;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .button-74:hover {
+      background-color: #fff;
+    }
+
+    .button-74:active {
+      box-shadow: #422800 2px 2px 0 0;
+      transform: translate(2px, 2px);
+    }
+
+    @media (min-width: 768px) {
+      .button-74 {
+        min-width: 120px;
+        padding: 0 25px;
+      }
+    }
+
+/* members.html css */
+.members-section .member-card {
+  background: #f9fafc;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.members-section .member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+.members-section h6 {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #333;
+}

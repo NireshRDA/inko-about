@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TEAM - InKo Centre - Nonprofit centre exploring Indian & Korean culture, with a cafe, art exhibits, programmes & classes.</title>
+  <meta name="description" content=""
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    
+   /* Hero Section */
+    .breadcumb-area {
+      background: url('assets/img/inko_entrance.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .breadcumb-area h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Team Section */
+    .team-section {
+      padding: 80px 0;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .team-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .team-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .team-info {
+      padding: 20px;
+    }
+
+    .team-info h5 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--inko-blue);
+      margin-bottom: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .team-card:hover h5 {
+      color: var(--inko-orange);
+    }
+
+    .team-info p {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .team-info a {
+      color: var(--inko-red);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .team-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .breadcumb-area h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo.jpg" alt="">
+        <!-- <h1 class="sitename">InKo Centre</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Home<br></a></li>
+          <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="identity.html">Identity</a></li>
+              <li><a href="patrons.html">Patrons</a></li>
+              <li><a href="governingcouncil.html">Governing Council</a></li>
+              <li><a href="teams.html">Team</a></li>
+              <li><a href="members.html">Membership</a></li>
+              <li><a href="partners.html">Partners</a></li>
+
+            </ul>    
+          </li>
+          <li class="dropdown"><a href="language.html"><span>Language</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="language_korean.html">Korean</a></li>
+              <li><a href="language_english.html">English</a></li>
+            </ul>    
+          </li>
+          <li class="dropdown"><a href="Wellness.html"><span>Wellness</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Yoga</a></li>
+              <li><a href="#">Calligraphy </a></li>
+              <li><a href="#">Ggotggozi </a></li>
+              <li><a href="#">Cooking Club</a></li>
+              <li><a href="#">History Club</a></li>
+              <li><a href="#">Tae Kwon Do</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="Culture.html"><span>Culture</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href="performing_arts.html"><span>Performing Arts</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>   
+                  <li><a href="Theater.html">Theatre</a></li>
+                  <li><a href="Music.html">Music</a></li>
+                  <li><a href="Dance.html">Dance</a></li>
+                  <li><a href="Film.html">Film</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="visual_arts.html"><span>Visual Arts</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>      
+                  <li><a href="Painting.html">Painting</a></li>
+                  <li><a href="Ceramic.html">Ceramic</a></li>
+                  <li><a href="Design.html">Design</a></li>
+                  <li><a href="Craft.html">Craft</a></li>
+                </ul>
+              </li>
+              <li><a href="collaborative_exchange.html">Collaborative Exchange</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+   <!-- Hero Section -->
+    <section class="breadcumb-area  bg-img zoom-animate mb-5 " style="background-image: url('assets/img/inko_entrance.jpg'); ">
+      <div class="breadcumb-area-about">
+        <div class="bradcumbContent " data-aos="fade-up">
+          <!--<p>See what’s new</p>-->
+          <h2 class="text-white fs-1 fw-semibold">Our Team</h2>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="space"></div> -->
+    <div class="container">
+      <section class="team-section">
+      <div class="team-grid">
+  
+        <!-- Team Member -->
+        <div class="team-card" data-aos="fade-up">
+          <img src="assets/img/team/Rathi_Jafer.jpg" alt="Dr Rathi Jafer">
+          <div class="team-info">
+            <h5>Dr Rathi Jafer</h5>
+            <p><strong>Director</strong></p>
+            <p>Email: <a href="mailto:rathi.jafer@inkocentre.org">rathi.jafer@inkocentre.org</a></p>
+          </div>
+        </div>
+  
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/img/team/vel.jpg" alt="M. Velkumar">
+          <div class="team-info">
+            <h5>M. Velkumar</h5>
+            <p><strong>Programme Manager</strong></p>
+            <p>Email: <a href="mailto:vel@inkocentre.org">vel@inkocentre.org</a></p>
+          </div>
+        </div>
+  
+        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/img/team/suparna.png" alt="Suparna Menon">
+          <div class="team-info">
+            <h5>Suparna Menon</h5>
+            <p><strong>Manager - Teaching & Info</strong></p>
+            <p>Email: <a href="mailto:suparna@inkocentre.org">suparna@inkocentre.org</a></p>
+          </div>
+        </div>
+  
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/team/Gail_Bosser.jpg" alt="Gail Bosser">
+          <div class="team-info">
+            <h5>Gail Bosser</h5>
+            <p><strong>Executive Assistant & Coordinator</strong></p>
+            <p>Email: <a href="mailto:gail.bosser@inkocentre.org">gail.bosser@inkocentre.org</a></p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/team/Gail_Bosser.jpg" alt="Gail Bosser">
+          <div class="team-info">
+            <h5>Gail Bosser</h5>
+            <p><strong>Executive Assistant & Coordinator</strong></p>
+            <p>Email: <a href="mailto:gail.bosser@inkocentre.org">gail.bosser@inkocentre.org</a></p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/team/Gail_Bosser.jpg" alt="Gail Bosser">
+          <div class="team-info">
+            <h5>Gail Bosser</h5>
+            <p><strong>Executive Assistant & Coordinator</strong></p>
+            <p>Email: <a href="mailto:gail.bosser@inkocentre.org">gail.bosser@inkocentre.org</a></p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/team/Gail_Bosser.jpg" alt="Gail Bosser">
+          <div class="team-info">
+            <h5>Gail Bosser</h5>
+            <p><strong>Executive Assistant & Coordinator</strong></p>
+            <p>Email: <a href="mailto:gail.bosser@inkocentre.org">gail.bosser@inkocentre.org</a></p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/team/Gail_Bosser.jpg" alt="Gail Bosser">
+          <div class="team-info">
+            <h5>Gail Bosser</h5>
+            <p><strong>Executive Assistant & Coordinator</strong></p>
+            <p>Email: <a href="mailto:gail.bosser@inkocentre.org">gail.bosser@inkocentre.org</a></p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/team/Gail_Bosser.jpg" alt="Gail Bosser">
+          <div class="team-info">
+            <h5>Gail Bosser</h5>
+            <p><strong>Executive Assistant & Coordinator</strong></p>
+            <p>Email: <a href="mailto:gail.bosser@inkocentre.org">gail.bosser@inkocentre.org</a></p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/team/Gail_Bosser.jpg" alt="Gail Bosser">
+          <div class="team-info">
+            <h5>Gail Bosser</h5>
+            <p><strong>Executive Assistant & Coordinator</strong></p>
+            <p>Email: <a href="mailto:gail.bosser@inkocentre.org">gail.bosser@inkocentre.org</a></p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/team/Gail_Bosser.jpg" alt="Gail Bosser">
+          <div class="team-info">
+            <h5>Gail Bosser</h5>
+            <p><strong>Executive Assistant & Coordinator</strong></p>
+            <p>Email: <a href="mailto:gail.bosser@inkocentre.org">gail.bosser@inkocentre.org</a></p>
+          </div>
+        </div>
+        <!-- Add more team members here similarly -->
+  
+      </div>
+      </section>
+    </div>
+    <div class="space"></div>
+  </main>
+  <footer id="footer" class="footer position-relative light-background">
+      
+    <div class="container">
+      <div class="row gy-4">
+            <div class="col-lg-12 col-md-6 footer-about">
+            <img src="assets/img/footerband.jpg" class="img-fluid" alt="...">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="text-center">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">InKo Centre</strong> <span> 2025 All rights reserved </span></p>
+      <div class="credits">
+        Designed by <a href="https://ardeyonbrands.com">Ardeyon Brands</a> 
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+   <script src="assets/jquery/jquery-2.2.4.min.js"></script>
+   <script src="assets/plugins/plugins.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+  
+  <!-- Swiper Initialization -->
+  <script>
+    const swiper = new Swiper('.hero-swiper', {
+      loop: true,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      effect: 'fade',
+      speed: 1000
+    });
+  </script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | InKo Centre</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .contact-section { padding: 60px 0; }
+    .contact-card { border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .contact-title { font-weight: 600; margin-bottom: 20px; }
+    .map-container iframe { border:0; width: 100%; height: 350px; border-radius: 12px; }
+    .form-check-label { margin-right: 15px; }
+  </style>
+</head>
+<body>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Contact Info -->
+      <div class="col-lg-4">
+        <div class="contact-card p-4 bg-white h-100">
+          <h5 class="contact-title">Contact Info</h5>
+          <p><i class="fa fa-map-marker-alt me-2"></i>18, Adyar Club Gate Road, Chennai - 600 028</p>
+          <p><i class="fa fa-phone me-2"></i>T: 044-2436 1224 <br> F: 044-2436 1226</p>
+          <p><i class="fa fa-envelope me-2"></i> enquiries@inkocentre.org</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="https://www.facebook.com/InKo-Centre-1474451499456176/" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="https://www.instagram.com/inkocentre/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://www.youtube.com/user/InKoCentre" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Map + Form -->
+      <div class="col-lg-8">
+        <div class="map-container mb-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.14040465646!2d80.24626551382981!3d13.026729590819743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267c801a1f02d%3A0xf7ad18e87c4c49ad!2sInKo%20Centre!5e0!3m2!1sen!2sin!4v1669283729956!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+        </div>
+
+        <div class="contact-card p-4 bg-white">
+          <h5 class="contact-title">Get In Touch</h5>
+          <form action="emailer.php" method="post">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <input type="text" class="form-control" name="fname" placeholder="Name" required>
+              </div>
+              <div class="col-md-4">
+                <input type="email" class="form-control" name="email" placeholder="E-mail" required>
+              </div>
+              <div class="col-md-4">
+                <input type="text" class="form-control" name="mobileno" placeholder="Mobile Number" required>
+              </div>
+
+              <!-- Film Festival -->
+              <div class="col-12">
+                <label class="form-label">Film Festival *</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="filmfest" value="Yes" checked>
+                  <label class="form-check-label">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="filmfest" value="No">
+                  <label class="form-check-label">No</label>
+                </div>
+              </div>
+
+              <!-- Other Programmes -->
+              <div class="col-12">
+                <label class="form-label">Other Programmes *</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="otherprog" value="Yes" checked>
+                  <label class="form-check-label">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="otherprog" value="No">
+                  <label class="form-check-label">No</label>
+                </div>
+              </div>
+
+              <!-- Wellness -->
+              <div class="col-12">
+                <label class="form-label">Wellness *</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="wellness[]" value="Yoga" checked>
+                  <label class="form-check-label">Yoga</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="wellness[]" value="Calligraphy">
+                  <label class="form-check-label">Calligraphy</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="wellness[]" value="Taekwondo">
+                  <label class="form-check-label">Taekwondo</label>
+                </div>
+              </div>
+
+              <!-- Language -->
+              <div class="col-12">
+                <label class="form-label">Language *</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="language[]" value="Korean" checked>
+                  <label class="form-check-label">Korean</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="language[]" value="English">
+                  <label class="form-check-label">English</label>
+                </div>
+              </div>
+
+              <!-- General Information -->
+              <div class="col-12">
+                <label class="form-label">General Information *</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="generalinfo[]" value="Workshop" checked>
+                  <label class="form-check-label">Workshop</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="generalinfo[]" value="Language_English">
+                  <label class="form-check-label">Language (English)</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="generalinfo[]" value="Language_Korean">
+                  <label class="form-check-label">Language (Korean)</label>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="col-12">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+              </div>
+
+              <div class="col-12 text-center">
+                <button type="submit" name="submit" value="SUBMIT" class="btn btn-primary px-5">Send <i class="fa fa-paper-plane ms-1"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
