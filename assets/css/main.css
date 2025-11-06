@@ -1018,6 +1018,7 @@ section,
   background-size: cover;
   background-position: center;
   padding: 0px;
+  /* border: 1px solid red; */
   /* animation: zoomInOut 12s ease-in-out infinite; */
   will-change: transform;
   backface-visibility: hidden;
@@ -1039,12 +1040,11 @@ section,
 .breadcumb-area .bradcumbContent {
   position: absolute;
   /* background-color: #ffffff; */
-  width: 552px;
+  width: 100% ;
   bottom: 50%;
-  left: 30%;
   z-index: 100;
+  /* border: 1px solid red; */
   text-align: center;
-  padding-top:40px;
   transform: translateX(-50%);
 }
 
